@@ -10,6 +10,5 @@
   <%= @zombie.graveyard %>
 </p>
 
-
-<%= link_to 'Edit', edit_zombie_path(@zombie) %> |
-<%= link_to 'Back', zombies_path %>
+<%= link_to raw('<i class="icon-chevron-left"></i>'), zombies_path, { :class => "btn", :title => "Back" } %>
+<%= link_to 'Edit', edit_zombie_path(@zombie), { :class => "btn btn-primary" } %>

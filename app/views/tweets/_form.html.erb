@@ -20,6 +20,7 @@
     <%= f.number_field :zombie %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<%= link_to raw('<i class="icon-chevron-left"></i>'), tweets_path, { :class => "btn", :title => "Back" } %>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
 <% end %>

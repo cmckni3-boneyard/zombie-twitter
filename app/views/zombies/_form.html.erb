@@ -20,6 +20,7 @@
     <%= f.text_field :graveyard %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<%= link_to raw('<i class="icon-chevron-left"></i>'), zombies_path, { :class => "btn", :title => "Back" } %>
+    <%= f.submit :class => "btn btn-primary" %>
   </div>
 <% end %>
