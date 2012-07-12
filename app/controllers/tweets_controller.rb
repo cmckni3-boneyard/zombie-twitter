@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  
+  before_filter :authenticate_zombie!
   # GET /tweets
   # GET /tweets.json
   def index

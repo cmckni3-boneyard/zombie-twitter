@@ -1,4 +1,6 @@
 class ZombiesController < ApplicationController
+  
+  before_filter :authenticate_zombie!
   # GET /zombies
   # GET /zombies.json
   def index

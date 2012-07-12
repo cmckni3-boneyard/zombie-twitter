@@ -1,4 +1,5 @@
 ZombieTwitter::Application.routes.draw do
+  devise_for :zombies, path_names: {sign_in: "login", sign_out: "logout"}
   root :to => "tweets#index"
   resources :tweets
 

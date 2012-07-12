@@ -28,6 +28,7 @@ gem 'seer'                        #
 gem 'sunspot_rails'               # solr-search engine support
 gem "twitter-bootstrap-rails"     # bootstrap styling
 gem 'unicorn'                     # lightweight multi-worker http server
+gem 'devise'
 
 
 group :development, :test do

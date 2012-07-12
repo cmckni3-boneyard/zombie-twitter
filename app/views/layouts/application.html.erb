@@ -31,8 +31,15 @@
           <a class="brand" href="/">Zombie Twitter</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Tweets", tweets_path  %></li>
-              <li><%= link_to "Zombies", zombies_path  %></li>
+              <% if zombie_signed_in? %>
+                <li><%= link_to "Tweets", tweets_path  %></li>
+                <li><%= link_to "Zombies", zombies_path  %></li>
+                <li><%= link_to 'Edit profile', edit_zombie_registration_path %></li>
+                <li><%= link_to "Logout", destroy_zombie_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "Sign up", new_zombie_registration_path %></li>
+                <li><%= link_to "Login", new_zombie_session_path %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
