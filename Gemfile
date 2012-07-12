@@ -33,6 +33,7 @@ gem 'unicorn'                     # lightweight multi-worker http server
 group :development, :test do
   gem 'mysql2'        # specified seperately in case you'd rather use sqlite3
   gem 'rspec-rails'   # rspec testing
+  gem 'guard-rspec', '0.5.5'
   gem 'sunspot_solr'  # runs solr search engine without needing to download/configure it
 end
 
@@ -51,6 +52,8 @@ end
 group :test do
   # gem 'cucumber-rails'      # Rspec alternative if you want it
   gem 'capybara'              # client-side testing
+  gem 'guard-spork'
+  gem 'spork'
   gem 'database_cleaner'      # treat db interactions as rollbackable, and other handy things
   gem 'factory_girl_rails'    # fixture factories
   gem 'launchy'               # call non-cross platform commands from ruby
