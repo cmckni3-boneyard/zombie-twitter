@@ -3,9 +3,13 @@
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
-
+  <div class="control-group">
+  <%= f.label :email %>
+  <div class="controls">
+    <%= f.email_field :email %>
+  </div>
+  </div>
+  
   <div><%= f.submit "Send me reset password instructions", :class => "btn btn-primary" %></div>
 <% end %>
 
