@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20120702072221) do
 
   create_table "tweets", :force => true do |t|
     t.string   "status"
-    t.integer  "zombie"
+    t.integer  "zombie_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

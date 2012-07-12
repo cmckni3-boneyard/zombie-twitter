@@ -44,7 +44,8 @@ class ZombiesController < ApplicationController
 
     respond_to do |format|
       if @zombie.save
-        format.html { redirect_to @zombie, notice: 'Zombie was successfully created.' }
+        flash[:success] = 'Zombie was successfully created.'
+        format.html { redirect_to @zombie }
         format.json { render json: @zombie, status: :created, location: @zombie }
       else
         format.html { render action: "new" }
@@ -60,7 +61,8 @@ class ZombiesController < ApplicationController
 
     respond_to do |format|
       if @zombie.update_attributes(params[:zombie])
-        format.html { redirect_to @zombie, notice: 'Zombie was successfully updated.' }
+        flash[:success] = 'Zombie was successfully updated.'
+        format.html { redirect_to @zombie }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

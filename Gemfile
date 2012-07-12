@@ -57,6 +57,7 @@ group :test do
   gem 'mocha'                 # mimic object interfaces
   gem 'rspec-rails-mocha'     # mocha-rspec hook
   gem 'turn'                  # Pretty print for test pass/fail summaries
+  gem 'growl', '1.0.3'
 end
 
 group :production, :staging do
