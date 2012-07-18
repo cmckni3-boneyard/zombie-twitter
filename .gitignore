@@ -15,9 +15,19 @@ config/database.yml
 
 # Ignore all logfiles and tempfiles.
 bin/*
-/log/*.log
-/tmp
 *.swp
 *~
 .project
 .DS_Store
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/vendor/bundle
+/log/*
+/tmp/*
+/public/system/*
+/coverage/
+/spec/tmp/*
+pickle-email-*.html
