@@ -28,8 +28,7 @@ gem 'seer'                        #
 gem 'sunspot_rails'               # solr-search engine support
 gem "twitter-bootstrap-rails"     # bootstrap styling
 gem 'unicorn'                     # lightweight multi-worker http server
-gem 'devise'
-
+gem 'strong_parameters'
 
 group :development, :test do
   gem 'mysql2'        # specified seperately in case you'd rather use sqlite3

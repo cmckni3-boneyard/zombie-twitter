@@ -1,6 +1,15 @@
 class ZombiesController < ApplicationController
   
   before_filter :authenticate_zombie!
+  before_filter :remove_blank_password, :only => [:create, :update]
+  
+  def remove_blank_password
+    if params[:zombie][:password].blank?
+      params[:zombie].delete(:password)
+      params[:zombie].delete(:password_confirmation)
+    end
+  end
+  
   # GET /zombies
   # GET /zombies.json
   def index

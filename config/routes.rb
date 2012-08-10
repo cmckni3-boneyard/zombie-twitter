@@ -3,7 +3,9 @@ ZombieTwitter::Application.routes.draw do
   root :to => "tweets#index"
   resources :tweets
 
-  resources :zombies
+  scope "/admin" do
+    resources :zombies
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
