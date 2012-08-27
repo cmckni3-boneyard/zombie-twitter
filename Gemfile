@@ -79,7 +79,6 @@ group :test do
   gem 'jasmine-rails'         # javascript testing
   gem 'guard-spork'           # use spork with guard
   gem 'spork'                 # test using a test server, increases speed of testing
-  gem 'minitest'              # 
   gem 'database_cleaner'      # treat db interactions as rollbackable, and other handy things
   gem 'factory_girl_rails'    # fixture factories
   gem 'mocha'                 # mimic object interfaces
