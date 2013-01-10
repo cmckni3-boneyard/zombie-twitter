@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.6'
+gem 'rails', '3.2.11'
 
 # RAILS REQUIRED GEMS
 gem 'jquery-rails'  #the latest jquery, for rails
