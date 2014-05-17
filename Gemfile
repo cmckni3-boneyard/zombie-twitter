@@ -13,6 +13,8 @@ group :assets do
   gem "twitter-bootstrap-rails"   # bootstrap styling
 end
 
+gem 'mysql2'
+
 # UNIVERSAL GEMS
 gem 'active_attr'                  # treat virtual attributes as db attributes in rails scopes
 gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility' # see schema in your models
@@ -48,9 +50,7 @@ gem 'strong_parameters'            # dynamic authorization for models
 # gem "authorize_net_reporting", "~> 1.0.1" # authorize.net transaction api for reporting, settlements, etc
 # gem 'savon'                        # library for making soap requests
 
-
 group :development, :test do
-  gem 'mysql2'                    # specified seperately in case you'd rather use sqlite3
   gem 'rspec-rails'               # rspec testing
   gem 'fuubar'                    # progress bar for rspec tests
   gem 'guard-rspec', '0.5.5'      # use guard for testing with rspec
@@ -60,8 +60,7 @@ end
 
 group :development do
   gem 'awesome_print'       # pretty print in irb to the max
-  gem 'capistrano'          # deployment tool
-  # gem 'debugger'          # better debugger (rails 3 support issues)
+  #gem 'capistrano'          # deployment tool
   gem 'fancy_irb'           # live result printing in irb
   gem 'hirb'                # table/tree irb object views
   gem 'nifty-generators'    # view generators
@@ -79,7 +78,6 @@ group :test do
   gem 'jasmine-rails'         # javascript testing
   gem 'guard-spork'           # use spork with guard
   gem 'spork'                 # test using a test server, increases speed of testing
-  gem 'database_cleaner'      # treat db interactions as rollbackable, and other handy things
   gem 'factory_girl_rails'    # fixture factories
   gem 'mocha'                 # mimic object interfaces
   gem 'rspec-rails-mocha'     # mocha-rspec hook
@@ -87,6 +85,3 @@ group :test do
   gem 'growl', '1.0.3'        # growl notifications when testing
 end
 
-group :production, :staging do
-  gem 'mysql2'          # specified seperately in case you want to use sqlite3 for dev
-end
